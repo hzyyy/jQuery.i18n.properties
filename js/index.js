@@ -1,4 +1,4 @@
-var LANGUAGE_CODE = "en_US"; //标识语言
+var LANGUAGE_CODE = "en"; //标识语言
 
 function loadProperties(type) {
     jQuery.i18n.properties({
@@ -10,13 +10,13 @@ function loadProperties(type) {
         encoding: 'UTF-8',
         callback: function () { // 回调方法    
             $('#text').html($.i18n.prop('string_text'));
-            $('#lang').html($.i18n.prop('string_lang'));
+            $('#button').html($.i18n.prop('string_lang'));
         }
     });
 }
 
 function switchLang() {
-    LANGUAGE_CODE = LANGUAGE_CODE == 'zh_CN' ? 'en_US' : 'zh_CN';
+    LANGUAGE_CODE = LANGUAGE_CODE == 'zh' ? 'en' : 'zh';
     loadProperties(LANGUAGE_CODE);
 }
 
